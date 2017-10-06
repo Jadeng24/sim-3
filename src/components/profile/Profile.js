@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Nav from './../nav/Nav.js'
+import './Profile.css'
 
 export default class Profile extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export default class Profile extends Component {
     }
 
     submit() {
-        axios.post('/profile/update', )
+        axios.post('/profile/update',  )
     }
 
 
