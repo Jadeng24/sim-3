@@ -9,7 +9,7 @@ export default class Profile extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            single: '',
+            relationship: '',
             hairColor: '',
             eyeColor: '',
             hobby: '',
@@ -30,7 +30,7 @@ export default class Profile extends Component {
     }
 
     submit() {
-        axios.post('/profile/update',  )
+        axios.post('/profile/update', this.state)
     }
 
 
@@ -44,10 +44,10 @@ export default class Profile extends Component {
                         <span>First Name</span><input onChange={(e) => this.handleChange('firstName', e.target.value)}></input>
                         <span>Last Name</span><input onChange={(e) => this.handleChange('lastName', e.target.value)}></input>
                         <span>Relationship Status</span>
-                        <select id="ralationship" onChange={(e) => this.handleChange('relationship', document.getElementById("relationship").value)}>
+                        <select id="relationship" onChange={(e) => this.handleChange('relationship', document.getElementById("relationship").value)}>
                             <option value="Single">Single</option>
                             <option value="Flirty but not serious">Flirty but not serious</option>
-                            <option value="Just looking">Just Looking</option>
+                            <option value="Just looking">Just creeping</option>
                             <option value="Taken">Taken</option>
                             <option value="Married">Married</option>
                             <option value="Open">Open</option>
@@ -60,8 +60,8 @@ export default class Profile extends Component {
                         </select>
                         <span>Eye Color</span>
                         <select id="eyeColor" onChange={(e) => this.handleChange('eyeColor', document.getElementById("eyeColor").value)}>
-                            <option value="Brown">Brown</option>
-                            <option value="Blonde">Blonde</option>
+                            <option value="blue">Blue</option>
+                            <option value="Green">Green</option>
                         </select>
                         <span>Hobby</span>
                         <select id="hobby" onChange={(e) => this.handleChange('hobby', document.getElementById("hobby").value)}>
@@ -70,6 +70,7 @@ export default class Profile extends Component {
                         </select>
                         <span>Birthday</span>
                         <select id="birthday" onChange={(e) => this.handleChange('birthday', document.getElementById("birthday").value)}>
+                            <option>-</option>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -104,18 +105,18 @@ export default class Profile extends Component {
                         </select>
                         <span>Birth Month</span>
                         <select id="birthMonth" onChange={(e) => this.handleChange('birthMonth', document.getElementById("birthMonth").value)} >
-                            <option>January</option>
-                            <option>February</option>
-                            <option>March</option>
-                            <option>April</option>
-                            <option>May</option>
-                            <option>June</option>
-                            <option>July</option>
-                            <option>August</option>
-                            <option>September</option>
-                            <option>October</option>
-                            <option>November</option>
-                            <option>December</option>
+                            <option value="1" >January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
                         </select>
                         <span>Year</span>
                         <select id="year" onChange={(e) => this.handleChange('year', document.getElementById("year").value)}>

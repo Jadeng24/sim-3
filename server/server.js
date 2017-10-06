@@ -46,7 +46,7 @@ const express = require('express'),
 
     setTimeout(_ => {
         const db = app.get('db') //problem
-        console.log('the db should be accessible', db);
+        console.log('the db should be accessible');
     }, 2000)
     // console.log(db.create_user)
 
