@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import './Private.css';
 import axios from 'axios';
-import { getUserInfo } from './../../ducks/users.js';
-import { connect } from 'react-redux';
 import Nav from './../nav/Nav.js'
 
 class Private extends Component {
@@ -17,7 +14,10 @@ class Private extends Component {
         return (
             <div className='profile'>
                 <Nav />
-                <span>Name</span><input></input>
+                <span>First Name</span><input></input>
+                <span>Last Name</span><input></input>
+
+                
             </div>
         )
     }
