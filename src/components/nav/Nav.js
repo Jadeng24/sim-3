@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Nav.css';
 import house from './house.png';
 import search from './search.png';
 
@@ -15,7 +16,8 @@ export default class Nav extends Component {
         return (
             <div className='nav'>
                 <img src={house} alt='home'/>
-                <img src={search} alt='search'/>
+                <img src={search} alt='search' />
+                hello
             </div>
         )
     }
