@@ -4,6 +4,8 @@ import house from './house.png';
 import search from './search.png';
 import Dashboard from './../dashboard/Dashboard.js';
 import Search from './../search/Search.js';
+import { Link } from 'react-router-dom';
+
 export default class Nav extends Component {
     constructor() {
         super()
@@ -18,8 +20,8 @@ export default class Nav extends Component {
             <div className='nav'>
                 <div className="leftNav">
                     <p className="Helo">Helo</p>
-                    <a href='http://localhost:3000/#/dashboard'><img src={house} alt='home' /></a>
-                    <a href='http://localhost:3000/#/search'><img src={search} alt='search' /></a>
+                    <Link to='/dashboard'><img src={house} alt='home' /></Link>
+                    <Link to="/search"><img src={search} alt='search' /></Link>
                 </div>
 
                 <div className='centerNav'>
@@ -27,8 +29,8 @@ export default class Nav extends Component {
                 </div>
 
                 <div className='rightNav'>
-                    <a href='http://localhost:3000/'>
-                        <p className="logout">Logout</p></a>
+                    <Link to="/">
+                        <p className="logout">Logout</p></Link>
                 </div>
             </div>
         )

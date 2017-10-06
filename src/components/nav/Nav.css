@@ -36,10 +36,4 @@
 .nav p.logout:hover {
     opacity: .5;
 }
-.nav a {
-    text-decoration: none;
-}
-.nav a.active {
-    text-decoration: none;
-    color: white;
-}
+

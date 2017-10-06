@@ -14,7 +14,7 @@ export default class Dashboard extends Component {
                         <div className="profileLink boxes">
                             <div className="profileImg"></div>
                             <div className="profileLinkContent"><p className="profileP">first</p><p className="profileP">last</p>
-                                <div className="editProfileBtn">Edit Profile</div>
+                                <Link to="/profile"><div className="editProfileBtn">Edit Profile</div></Link>
                             </div>    
                         </div>
                         <div className="welcome boxes">Welcome to Helo! Find recommended friends based on your similarities, and even search for them by name. The more you update your profile, the better recommendations we can make!</div>
