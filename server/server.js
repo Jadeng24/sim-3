@@ -7,6 +7,9 @@ const express = require('express'),
     Auth0Strategy = require('passport-auth0');
 
 
+    const app = express();
+    
+
     app.use(bodyParser.json());
     app.use(session({
         secret: process.env.SECRET,
@@ -53,7 +56,7 @@ const express = require('express'),
     app.get('/auth', passport.authenticate('auth0'));
     
     app.get('/auth/callback', passport.authenticate('auth0', {
-        successRedirect: 'http://localhost:3000/#/',
+        successRedirect: 'http://localhost:3000/',
         failureRedirect: '/auth'
     }));
     app.get('/auth/me', (req, res) => {
@@ -65,21 +68,26 @@ const express = require('express'),
     
     app.get('/auth/logout', (req, res) => {
         req.logOut();
-        res.redirect(302, 'http://localhost:3000/#/')
+        res.redirect(302, 'http://localhost:3000/')
     })
     
     
+    passport.serializeUser((user, done) => {
+        done(null, user);
+    })
+    passport.deserializeUser((user, done) => {
+        done(null, user);
+    })
     
-    
-    passport.serializeUser(function (id, done) {
-        done(null, id);
-    });
-    passport.deserializeUser(function (id, done) {
-        app.get('db').find_current_user([id])
-        .then( user => {
-            done(null, user[0])
-        })
-    });
+    // passport.serializeUser(function (id, done) {
+    //     done(null, id);
+    // });
+    // passport.deserializeUser(function (id, done) {
+    //     app.get('db').find_current_user([id])
+    //     .then( user => {
+    //         done(null, user[0])
+    //     })
+    // });
     
 
 
