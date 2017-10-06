@@ -53,7 +53,7 @@ const express = require('express'),
     app.get('/auth', passport.authenticate('auth0'));
     
     app.get('/auth/callback', passport.authenticate('auth0', {
-        successRedirect: 'http://localhost:3000/#/private',
+        successRedirect: 'http://localhost:3000/#/',
         failureRedirect: '/auth'
     }));
     app.get('/auth/me', (req, res) => {
