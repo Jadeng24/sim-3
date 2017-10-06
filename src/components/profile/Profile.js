@@ -47,7 +47,7 @@ export default class Profile extends Component {
                         <select id="relationship" onChange={(e) => this.handleChange('relationship', document.getElementById("relationship").value)}>
                             <option value="Single">Single</option>
                             <option value="Flirty but not serious">Flirty but not serious</option>
-                            <option value="Just looking">Just creeping</option>
+                            <option value="Just creeping">Just creeping</option>
                             <option value="Taken">Taken</option>
                             <option value="Married">Married</option>
                             <option value="Open">Open</option>
@@ -55,18 +55,24 @@ export default class Profile extends Component {
                         </select>
                         <span>Hair Color</span>
                         <select id="hairColor" onChange={(e) => this.handleChange('hairColor', document.getElementById("hairColor").value)}>
-                            <option value="Brown">Brown</option>
-                            <option value="Blonde">Blonde</option>
+                            <option value="Rusty">Rusty</option>
+                            <option value="Shiny">Shiny</option>
                         </select>
                         <span>Eye Color</span>
                         <select id="eyeColor" onChange={(e) => this.handleChange('eyeColor', document.getElementById("eyeColor").value)}>
-                            <option value="blue">Blue</option>
-                            <option value="Green">Green</option>
+                            <option value="Steel Blue">Steel Blue</option>
+                            <option value="Copper Green">Copper Green</option>
+                            <option value="Metallic Blonde">Metallic Blonde</option>
                         </select>
                         <span>Hobby</span>
                         <select id="hobby" onChange={(e) => this.handleChange('hobby', document.getElementById("hobby").value)}>
-                            <option value="Video Games">Video Games</option>
-                            <option value="Sports">Sports</option>
+                            <option value="Computing">Computing</option>
+                            <option value="Compiling">Compiling</option>
+                            <option value="Loading">Loading</option>
+                            <option value="Bending">Bending</option>
+                            <option value="Buffering">Buffering</option>
+                            <option value="Silent overtaking of the world">Silent overtaking of the world</option>
+                            <option value="Throwing Errors">Throwing Errors</option>
                         </select>
                         <span>Birthday</span>
                         <select id="birthday" onChange={(e) => this.handleChange('birthday', document.getElementById("birthday").value)}>
