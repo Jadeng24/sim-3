@@ -6,10 +6,12 @@ import Nav from './../nav/Nav.js';
 export default class Search extends Component {
     render() {
         return (
-
-            <div className='search'>
+            <div>
                 <Nav />
-            </div>
+            <div className='search'>
+                
+                </div>
+            </div>    
         )
     }
 }
