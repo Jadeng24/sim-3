@@ -1,5 +1,58 @@
 .dashboard {
-    background: orange;
-    width: 100vh;
+    background: rgb(237, 237, 237);
+    height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center; 
+    padding-top: 30px;
+    min-width: 800px;
+}
+.dashTop {
+    width: 80%;
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.boxes {
+    padding: 10px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.425);
+    background: white;
+    border-radius: 4px;
+}
+.profileLink {
+    width: 30%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.profileImg {
+    width: 40%;
+    height: 95%;
+    border: 3px solid rgb(255, 142, 100);
+    
+}
+.profileLinkContent {
+    text-align: left;
+}
+.editProfileBtn {
+    padding: 4px 20px;
+    border: solid 1px grey;
+    background: rgb(226, 226, 226);
+}
+.profileP {
+font-size: 18pt;
+line-height: 35px;
+letter-spacing: 2px;
+font-weight: 600;
+padding: 0;
+margin: 0;
+
+}
+.welcome {
+    width: 55%;
+    height: 110px;
+    text-align: left;
 }
